@@ -265,3 +265,11 @@
   .menu-rodape a:hover {
     color: #ffc107; /* Amarelo no hover */
   }
+
+/* imagem Família */
+
+  img {
+    width: 100%;
+    max-width: 500px; /* Ajuste o tamanho máximo conforme necessário */
+    height: auto;
+  }
