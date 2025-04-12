@@ -3,6 +3,7 @@
 Aula de Interativadade, conversa em grupo.
 
 Palavras-chave comuns de programação e suas traduções:
+
 int — inteiro
 
 float — ponto flutuante (número decimal)
@@ -186,6 +187,7 @@ HTML - Palavras-chave e Atributos
 <nav> — Navegação (links de navegação)
 
 <aside> — Conteúdo secundário (geralmente uma barra lateral)
+
 
 CSS - Propriedades e Conceitos
 color — Cor do texto
