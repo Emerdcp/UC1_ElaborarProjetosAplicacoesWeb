@@ -1,26 +1,35 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+    margin: 0; /*Remove as margens padrão de os elementos */
+    padding: 0; /*Remove o preenchimento (padding) padrão os elementos */
+    box-sizing: border-box; /*Faz com que o tamanho de um elemento (largura/altura) inclua bordas e preenchimentos. Isso facilita o controle do tamanho dos elementos*/
   }
   
+  /*Centralizaçaõ e Justificativa de texto*/
+  p {
+    text-align: justify;  
+  }
+
+  .hero p {
+    text-align: center;
+  }
+
   body {
-    font-family: 'Segoe UI', sans-serif;
-    color: #333;
-    line-height: 1.6;
-    background-color: #f9f9f9;
+    font-family: 'Segoe UI', sans-serif; /*Define a fonte principal da página (se o Segoe UI não estiver disponível, o navegador usará uma fonte sans-serif genérica*/
+    color: #333; /*Define a cor do texto para um tom de cinza escuro (#333)*/
+    line-height: 1.6; /*Aumenta o espaçamento entre as linhas de texto, para uma leitura mais confortável.*/
+    background-color: #f9f9f9; /*Define o fundo da página com um tom de cinza muito claro*/
   }
   
   .container {
-    max-width: 1100px;
-    margin: auto;
-    padding: 20px;
+    max-width: 1100px; /* Define a largura máxima da container para 1100px. Isso impede que o conteúdo fique muito largo em telas grandes*/
+    margin: auto; /*Centraliza a container horizontalmente na página*/
+    padding: 20px; /*Adiciona um preenchimento interno de 20px em  os lados, evitando que o conteúdo fique muito colado às bordas*/
   }
   
   header {
-    background: #a9a7a3; /* Amarelo vivo */
-    color: #333;
-    padding: 20px 0;
+    background: #ffffff; /* Define a cor de fundo do cabeçalho como um tom de cinza - Amarelo vivo */
+    color: #333; /*Define a cor do texto dentro do cabeçalho*/
+    padding: 20px 0; /*Adiciona 20px de espaço acima e abaixo do conteúdo do cabeçalho*/
   }
   
   header .container {
@@ -30,34 +39,34 @@
   }
   
   nav ul {
-    list-style: none;
-    display: flex;
-    gap: 20px;
+    list-style: none; /*Remove as bolinhas (ou marcadores) da lista de navegação*/
+    display: flex; /*Exibe os itens de navegação em linha (horizontais) ao invés de uma lista vertical*/
+    gap: 20px; /*Adiciona um espaçamento de 20px entre cada item da lista*/
   }
   
   nav a {
-    color: #333;
-    text-decoration: none;
-    font-weight: bold;
+    color: #333; /*Define a cor dos links para um tom de cinza escuro*/
+    text-decoration: none; /*Remove o sublinhado dos links*/
+    font-weight: bold; /*Torna o texto dos links em negrito*/
   }
   
   nav a:hover {
-    text-decoration: underline;
+    text-decoration: underline; /*Adiciona o sublinhado ao link quando o mouse passa sobre ele (efeito hover).*/
   }
   
   .hero {
-    background: #e0e0e0; /* Cinza claro */
-    text-align: center;
-    padding: 60px 20px;
+    background: #e0e0e0; /* Cinza claro Define o fundo da seção hero como um tom de cinza claro*/
+    text-align: center; /*Centraliza o texto dentro dessa seção*/
+    padding: 60px 20px; /*Adiciona 60px de espaço superior e inferior e 20px nas laterais*/
   }
   
   .hero h2 {
-    font-size: 2.5em;
-    margin-bottom: 10px;
+    font-size: 2.5em; /*Aumenta o tamanho da fonte para 2,5 vezes o tamanho padrão*/
+    margin-bottom: 10px; /* Adiciona um espaço abaixo do título*/
   }
   
   .hero p {
-    font-size: 1.2em;
+    font-size: 1.2em; /*Aumenta o tamanho da fonte do parágrafo para 1,2 vezes o tamanho padrão*/
   }
   
   .hero .btn {
@@ -135,40 +144,52 @@
   /* Cards lado a lado. */
 
   .cards {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-    justify-content: center;
+    display: flex; /*Define que os cards sejam dispostos em linha*/
+    flex-wrap: wrap; /*Faz com que os cards "quebrem" para a próxima linha quando não couberem*/
+    gap: 20px; /*Adiciona um espaçamento de 20px entre os cards*/
+    justify-content: center; /*Centraliza os cards horizontalmente*/
     margin-top: 20px;
   }
   
   .card {
-    background: #ffffff;
-    border: 1px solid #ddd;
-    border-radius: 10px;
-    overflow: hidden;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-    width: 300px;
-    transition: transform 0.3s ease;
+    background: #ffffff; /*Define o fundo dos cards como branco*/
+    border: 1px solid #ddd; /*Adiciona uma borda cinza clara aos cards*/
+    border-radius: 10px; /*Arredonda os cantos do card*/
+    overflow: hidden; /*Garante que nada saia dos limites do card.*/
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1); /* Adiciona uma leve sombra para dar profundidade ao card*/
+    width: 300px; /*Define a largura fixa do card*/
+    transition: transform 0.3s ease; /*Cria uma transição suave para qualquer transformação (como o efeito de hover).*/
+    display: flex;
+    flex-direction: column;
   }
   
   .card:hover {
-    transform: translateY(-5px);
+    transform: translateY(-5px); /*Quando o mouse passa sobre o card, ele sobe um pouco (efeito de hover).*/
   }
   
   .card img {
     width: 100%;
-    height: auto;
-    display: block;
+    height: 180px; /* altura padrão para todas as imagens */
+    /* height: auto; */
+    /* display: block; */
+    object-fit: cover;
+    border-bottom: 1px solid #eee;
   }
   
-  .card h3 {
+  /* .card h3 {
     margin: 15px;
+    color: #333;
+  } */
+
+  .card h3 .card{
+    margin: 15px;
+  }
+  .card h3 {
     color: #333;
   }
   
   .card p {
-    margin: 0 15px 15px;
+    /* margin: 0 15px 15px; */
     color: #666;
   }
 
@@ -230,7 +251,7 @@
     color: #666;
   }
   
-  //   Alinhando o Rodape da Menu
+ /* Alinhando o Rodape da Menu */
 
 .navegacao-section {
     display: flex;
@@ -273,3 +294,48 @@
     max-width: 500px; /* Ajuste o tamanho máximo conforme necessário */
     height: auto;
   }
+
+
+
+  @media (max-width: 768px) {
+    header .container {
+      flex-direction: column;
+      text-align: center;
+    }
+  
+    .hero h2 {
+      font-size: 2em;
+    }
+  
+    .hero p {
+      font-size: 1em;
+    }
+  
+    .cards {
+      flex-direction: column;
+      gap: 10px;
+    }
+  
+    .card {
+      width: 100%;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .logo-header {
+      justify-content: center;
+    }
+  
+    .logo {
+      height: 150px; /* Logo menor em telas pequenas */
+    }
+  
+    .hero h2 {
+      font-size: 1.8em;
+    }
+  
+    .hero p {
+      font-size: 0.9em;
+    }
+  }
+  
