@@ -5,37 +5,34 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <link rel="stylesheet" href="style.css" />
 </head>
+<body>
 <header>
     <div class="container">
-      <div class="container logo-header">
+      <div class="logo-header">
         <img src="imagens/logoIsisSeguro.png" alt="Logo Isis Seguros" class="logo">
       </div>
-      <div>
-          <nav class="menu-rodape">
-              <ul>
-                  <li><a href="#quemSomos">Quem Somos</a></li>
-                  <li><a href="#produtos">Produtos</a></li>
-                  <li><a href="#contato">Contato</a></li>
-                  <li><a href="#">Assistência 24hs</a></li>
-                  <li><a href="#">Solicite uma Proposta</a></li>
-              </ul>
-          </nav>
-      </div>
+        <nav class="menu-rodape">
+            <ul>
+                <li><a href="#quemSomos">Quem Somos</a></li>
+                <li><a href="#produtos">Produtos</a></li>
+                <li><a href="#contato">Solicite uma Proposta</a></li>
+                <li><a href="#" id="btn-assistencia">Assistência 24hs</a></li>
+            </ul>
+        </nav>
     </div>
 </header>
-<body>
+<!-- <body> -->
   <section class="hero">
-    <div class="container">
-      <h2>Proteja o que é mais importante</h2>
-        <p>Seguro para você, sua família e seus bens com quem entende do assunto.</p>
-      <a href="#contato" class="btn">Fale Conosco</a>
-      <div class="container logo-header">
-        <img src="imagens/familia.jpg" alt="" class="">
+    <div class="overlay">
+      <div class="container">
+        <h2>Proteja o que é mais importante</h2>
+          <p>Seguro para você, sua família e seus bens com quem entende do assunto.</p>
+        <a href="#contato" class="btn">Solicite uma proposta</a>
       </div>
     </div>
   </section>
 
-  <section id="quemSomos" class="quemSomos">
+  <section id="quemSomos">
     <div class="container">
       <h2>Quem Somos</h2>
       <p>Nossa corretora é especializada em oferecer diversas modalidades de seguros e benefícios para pessoas físicas e empresas. Respaldada pela qualificação de seus profissionais e também pela sólida parceria com as melhores seguradoras do mercado, estamos capacitados à identificar quais são os produtos que melhor atendem às suas necessidades. Seguimos em constante atualização e contando com uma completa infraestrutura, nossa corretora se destaca pela excelência nos serviços prestados com agilidade e eficácia.</p>
@@ -44,33 +41,54 @@
 
   <section id="produtos" class="produtos">
     <div class="container">
-        <h2>Nossos Produtos</h2>
-        <div class="cards" >
-          <div class="card">
+      <h2>Nossos Produtos</h2>
+        <div class="cards">
+          <div class="card" data-produto="auto"> <!-- data-produto="auto" Para abrir o Modal.-->
             <img src="imagens/seguroAuto.jpg" alt="Seguro Auto">
             <h3>Seguro Auto</h3>
             <p>Para proteger seu veículo, você também pode usufruir de uma série de vantagens.</p>
           </div>
-          <div class="card">
+          <div class="card" data-produto="previdencia"> <!-- data-produto="previdencia" Para abrir o Modal.-->
             <img src="imagens/previdencia.jpg" alt="Previdência">
             <h3>Previdência</h3>
             <p>Planeje seu futuro com um dos planos de Previdência para você.</p>
           </div>
-          <div class="card">
+          <div class="card" data-produto="residencial"> <!-- data-produto="residencial" Para abrir o Modal.-->
             <img src="imagens/seguroResidencial.jpg" alt="Seguro Residencial">
             <h3>Seguro Residencial</h3>
             <p>O Seguro Residência foi feito para garantir o seu patrimônio e superar suas expectativas.</p>
+          </div>
+          <div class="card" data-produto="condominio"> <!-- data-produto="auto" Para abrir o Modal.-->
+            <img src="imagens/condominio.jpg" alt="condominio">
+            <h3>Seguro para Condomínio</h3>
+            <p>Com Seguro Condomínio você deixa de se preocupar com eventuais problemas e ainda acumula vantagens.</p>
+          </div>
+          <div class="card" data-produto="empresariais"> <!-- data-produto="auto" Para abrir o Modal.-->
+            <img src="imagens/seguroEmpresariais.jpg" alt="empresariais">
+            <h3>Seguro Empresariais</h3>
+            <p>O Porto Seguro Empresa cuida do seu patrimônio com eficiência, segurança e economia.</p>
           </div>
         </div>
       </div>
   </section>
 
+  <!-- Modal para abrir informações dos Card-->
+  <div id="modal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <h3 id="modal-title"></h3>
+      <p id="modal-texto"></p>
+    </div>
+  </div>
+  
+
   <section id="contato" class="contato">
     <div class="container">
       <h2>Entre em Contato</h2>
-      <form>
+      <form id="form-contato">
         <input type="text" placeholder="Seu nome" required />
         <input type="email" placeholder="Seu email" required />
+        <input type="telefone" placeholder="Seu Telefone" required />
         <textarea placeholder="Sua mensagem" required></textarea>
         <button type="submit">Enviar</button>
       </form>
@@ -83,8 +101,59 @@
     </div>
   </footer>
 
+  <!-- -------Modal para o botão Assistência 24hs---------- -->
+  <div id="modal-assistencia" class="modal">
+    <div class="modal-content">
+      <span class="close" id="fechar-assistencia">&times;</span>
+      <h3>Assistência 24hs</h3>
+      <p>Estamos sempre prontos para te ajudar, a qualquer hora do dia ou da noite. Entre em contato pelo telefone 0800-000-000 ou via nosso WhatsApp.</p>
+  
+      <!-- Cards dentro do modal -->
+      <div class="cards">
+        <div class="card">
+          <img src="imagens/hdiSeguro.jpg" alt="">
+          <h4>HDI SEGUROS</h4>
+          <p>Assistência 24hs, Vidros e Reparos, Sinistro.</p>
+          <p>Automóvel, Residencial, Empresarial e Condomínio.</p>
+          <p>Telefone: 3003.5390 - 0800.434.4340</p>
+        </div>  
+        <div class="card">
+          <img src="imagens/portoSeguro.jpg" alt="">
+          <h4>Porto Seguro</h4>
+          <p>Assistência 24hs, Vidros e Reparos, Sinistro.</p>
+          <p>Automóvel, Residencial, e Empresarial.</p>
+          <p>Telefone: 4004.76.786 - 0300.337.6786</p>
+        </div>  
+        <div class="card">
+          <img src="imagens/asulSeguro.png" alt="">
+          <h4>Azul</h4>
+          <p>Assistência 24hs.</p>
+          <p>Automóvel.</p>
+          <p>Telefone: 4004.3700 - 0800.703.0203</p>
+        </div>
+        <div class="card">
+          <img src="imagens/bateria.jpg" alt="">
+          <h4>Mitsui</h4>
+          <p>Assistência 24hs.</p>
+          <p>Automóvel, Residencial, e Empresarial.</p>
+          <p>Telefone: 0300.772.6744</p>
+        </div>
+        <div class="card">
+          <img src="imagens/chaveiro.jpg" alt="">
+          <h4>Tókio</h4>
+          <p>Assistência 24hs e Sinistros.</p>
+          <p>Automóvel, Residencial, e Empresarial.</p>
+          <p>Telefone: 0300.772.6744</p>
+          <p>Vidros.</p>
+          <p>Telefone: 0800.707.8005</p>
+          <p>Carro Reserca.</p>
+          <p>Telefone: 0800.208.6546 - (11) 2125.3212</p>
+        </div> 
+      </div>
+    </div>
+  </div>
+  
+
   <script src="script.js"></script>
-
-
 </body>
 </html>
