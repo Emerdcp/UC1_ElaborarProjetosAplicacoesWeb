@@ -95,3 +95,54 @@ document.getElementById('form-contato').addEventListener('submit', function(e) {
       modalAssistencia.style.display = "none";
     }
   });
+
+
+  //limpar campo no formulário
+
+  function limparFormulario() {
+    document.getElementById("form-contato").reset();
+  }
+
+
+
+
+
+//Padronização para telefone
+
+const telefoneInput = document.getElementById("telefone");
+
+  telefoneInput.addEventListener("input", function (e) {
+    let valor = e.target.value.replace(/\D/g, ""); // Remove tudo que não for número
+
+    if (valor.length > 11) valor = valor.slice(0, 11); // Limita a 11 dígitos
+
+    // Aplica máscara (XX) XXXXX-XXXX
+    if (valor.length > 6) {
+      valor = valor.replace(/(\d{2})(\d{5})(\d{0,4})/, "($1) $2-$3");
+    } else if (valor.length > 2) {
+      valor = valor.replace(/(\d{2})(\d{0,5})/, "($1) $2");
+    } else {
+      valor = valor.replace(/(\d*)/, "($1");
+    }
+
+    e.target.value = valor;
+  });
+
+
+  //envio e configuração e-mail
+
+
+  function validarEmail() {
+    const email = document.getElementById("email").value;
+    
+    // Expressão regular para validar email
+    const regex = /^[\w.-]+@[\w.-]+\.[a-zA-Z]{2,}$/;
+
+    if (!regex.test(email)) {
+      alert("❌ E-mail inválido! Use o formato: exemplo@dominio.com");
+      return false; // Impede o envio do formulário
+    }
+
+    // Se estiver tudo certo
+    return true;
+  }

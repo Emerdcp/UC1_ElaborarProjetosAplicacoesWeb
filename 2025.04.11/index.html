@@ -4,12 +4,13 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <link rel="stylesheet" href="style.css" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
 </head>
-<body>
+<body style="background-image: url(imagens/logoIsisSeguroFundo.png); background-attachment: fixed; background-repeat: no-repeat; background-size: 100% 100%;">
 <header id="home">
     <div class="container">
       <div class="logo-header">
-        <img src="imagens/logoIsisSeguro.png" alt="Logo Isis Seguros" class="logo">
+        <img src="imagens/logoIsisSeguro.png" alt="Logo Isis Seguros" title="Isis Seguro" class="logo">
       </div>
         <nav class="menu-rodape">
             <ul>
@@ -32,19 +33,23 @@
 
     </div>
   </section>
-
+  
   <section id="quemSomos">
     <div class="container">
       <h2>Quem Somos</h2>
+      <div class="alinha-direita">
+        <a href="#home" class="botao-topo" class="alinha-direita">🔝 Inicio</a>
+      </div>  
       <p>Nossa corretora é especializada em oferecer diversas modalidades de seguros e benefícios para pessoas físicas e empresas. Respaldada pela qualificação de seus profissionais e também pela sólida parceria com as melhores seguradoras do mercado, estamos capacitados à identificar quais são os produtos que melhor atendem às suas necessidades. Seguimos em constante atualização e contando com uma completa infraestrutura, nossa corretora se destaca pela excelência nos serviços prestados com agilidade e eficácia.</p>
-      <a href="#home" class="botao-topo">🔝 Inicio</a>
     </div>
   </section>
-
+  <hr>
   <section id="produtos" class="produtos">
     <div class="container">
       <h2>Nossos Produtos</h2>
-      <a href="#home" class="botao-topo">🔝 Inicio</a>
+      <div class="alinha-direita">
+        <a href="#home" class="botao-topo" class="alinha-direita">🔝 Inicio</a>
+      </div>  
         <div class="cards">
           <div class="card" data-produto="auto"> <!-- data-produto="auto" Para abrir o Modal.-->
             <img src="imagens/seguroAuto.jpg" alt="Seguro Auto">
@@ -84,27 +89,51 @@
     </div>
   </div>
   
+  <hr>
 
   <section id="contato" class="contato">
     <div class="container">
       <h2>Entre em Contato</h2>
-      <form id="form-contato">
-        <a href="#home" class="botao-topo">🔝 Inicio</a>
-        <input type="text" placeholder="Seu nome" required />
-        <input type="email" placeholder="Seu email" required />
-        <input type="telefone" placeholder="Seu Telefone" required />
-        <textarea placeholder="Sua mensagem" required></textarea>
-        <button type="submit">Enviar</button>
-        <a href="#home" class="botao-topo">🔝 Inicio</a>
+      <form  class="container mb-4" id="form-contato">
+        <div class="alinha-direita">
+          <a href="#home" class="botao-topo" class="alinha-direita">🔝 Inicio</a>
+        </div>        
+        <div class="row g-3">
+          <div class="col-md-4">
+            <label for="nome" class="form-label">Nome</label>
+            <input type="text" class="form-control" id="nome" placeholder="Seu nome" required />
+            <small class="form-text text-muted"></small>
+          </div>
+          <div class="col-md-4">
+            <label for="telefone" class="form-label">Telefone</label>
+            <input type="tel" class="form-control" id="telefone" placeholder="(99)99999-9999" required pattern="\(\d{2}\) \d{5}-\d{4}" />
+            <small class="form-text text-muted">Digite o DDD e o número, ex: (99)99999-9999</small>
+          </div>
+          <div class="col-md-4">
+            <label for="email" class="form-label">Email</label>
+            <input type="email" class="form-control" id="email" placeholder="exemplo@dominio.com" required/>
+            <small class="form-text text-muted">Digite um e-mail válido. Ex: nome@exemplo.com</small>
+          </div>
+          <div class="col-12">
+            <label for="mensagem" class="form-label">Mensagem</label>
+            <textarea class="form-control" id="mensagem" placeholder="Sua mensagem" rows="4" required></textarea>
+          </div>
+          <div class="col-12 text-end">
+            <button type="submit">Enviar</button>
+            <button type="button" class="botao" onclick="limparFormulario()">Cancelar</button>
+          </div>
+        </div>
       </form>
     </div>
   </section>
 
+  
   <footer>
     <div class="container">
-      <p>&copy; 2025 SeguraMais. Todos os direitos reservados.</p>
+      <p>&copy; Isis Seguros. Todos os direitos reservados.</p>
     </div>
   </footer>
+
 
   <!-- -------Modal para o botão Assistência 24hs---------- -->
   <div id="modal-assistencia" class="modal">

@@ -454,6 +454,7 @@
   .botao-topo {
     display: inline-block;
     padding: 5px 15px;
+    cursor: pointer;
     background-color: #ffc107;
     color: rgb(0, 0, 0);
     text-decoration: none;
@@ -472,3 +473,7 @@
     transform: scale(0.98);
   }
 
+  .alinha-direita {
+    text-align: right;
+    margin-bottom: 10px; /* opcional: dá um espacinho */
+  }
