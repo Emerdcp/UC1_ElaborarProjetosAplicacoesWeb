@@ -2,9 +2,33 @@
 
 document.getElementById('form-proposta').addEventListener('submit', function(e) {
     e.preventDefault();
-    alert('Mensagem enviada com sucesso! Em breve entraremos em contato.');
-    this.reset();
-  });
+
+    const data = {
+      nome: document.getElementById("nome").value,
+      telefone: document.getElementById("telefone").value,
+      email: document.getElementById("email").value,
+      enviar: true
+    }
+
+    // Envia os dados para o arquivo PHP
+    fetch('enviar-email.php', {
+      method: 'POST',
+      body: data
+    })
+    .then(response => response.text())
+    .then(data => {
+      console.log(data)
+      return
+      // Aqui você pode verificar a resposta do servidor
+      alert('Mensagem enviada com sucesso! Em breve entraremos em contato.');
+      form.reset();
+    })
+    .catch(error => {
+      console.error('Erro ao enviar o formulário:', error);
+      alert('Erro ao enviar a mensagem. Tente novamente mais tarde.');
+    });
+});
+
 
 //================== MODAL PARA CARDS ==================//
 

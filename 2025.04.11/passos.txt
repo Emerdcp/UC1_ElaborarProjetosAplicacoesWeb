@@ -1,0 +1,4 @@
+# 1. Preparar dados no javascript para enviar para um arquivo .php enviar_email.php
+# 2. Configurar composer no projeto do site
+# 3. Baixar biblioteca PHPMailer no projeto do site
+# 4. Criar arquivo que recebe o e-mail e envia um e-mail para você mesmo com os dados recebidos do cliente
