@@ -3,11 +3,15 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Isis - Seguro</title>
+  <link rel="icon" href="imagens/isis.png" type="imagens/isis.jpeg">
   <link rel="stylesheet" href="style.css" />
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
 </head>
-<body style="background-image: url(imagens/logoIsisSeguroFundo.png); background-attachment: fixed; background-repeat: no-repeat; background-size: 100% 100%;">
-<header id="home">
+<!-- <body> -->
+<body style="background-image: url(imagens/logoIsisSeguroFundo.png); background-attachment: fixed; background-repeat: no-repeat; background-size: 100% 100%;">  
+  <!--================== LOGO E MENU ==================-->
+  <header id="home">
     <div class="container">
       <div class="logo-header">
         <img src="imagens/logoIsisSeguro.png" alt="Logo Isis Seguros" title="Isis Seguro" class="logo">
@@ -16,24 +20,25 @@
             <ul>
                 <li><a href="#quemSomos">Quem Somos</a></li>
                 <li><a href="#produtos">Produtos</a></li>
-                <li><a href="#contato">Solicite uma Proposta</a></li>
+                <li><a href="#proposta">Solicite uma Proposta</a></li>
                 <li><a href="#" id="btn-assistencia">Assistência 24hs</a></li>
+                <li><a href="#contato">Contato</a></li>
             </ul>
         </nav>
     </div>
 </header>
-<!-- <body> -->
+<!--================== SESSÃO SOLICITE UMA PROPOSTA ==================-->
   <section class="hero">
     <div class="overlay">
       <div class="container">
         <h2>Proteja o que é mais importante</h2>
           <p>Seguro para você, sua família e seus bens com quem entende do assunto.</p>
-        <a href="#contato" class="btn">Solicite uma proposta</a>
+        <a href="#proposta" class="btn">Solicite uma proposta</a>
       </div>
 
     </div>
   </section>
-  
+  <!--================== QUEM SOMOS ==================-->
   <section id="quemSomos">
     <div class="container">
       <h2>Quem Somos</h2>
@@ -44,6 +49,7 @@
     </div>
   </section>
   <hr>
+  <!--================== PRODUTOS - CARDS ==================-->
   <section id="produtos" class="produtos">
     <div class="container">
       <h2>Nossos Produtos</h2>
@@ -79,8 +85,7 @@
         </div>
       </div>
   </section>
-
-  <!-- Modal para abrir informações dos Card-->
+<!--================== MODAL PARA ABRIR AS INFORMAÇÕES DOS CARDS ==================-->
   <div id="modal" class="modal">
     <div class="modal-content">
       <span class="close">&times;</span>
@@ -88,37 +93,37 @@
       <p id="modal-texto"></p>
     </div>
   </div>
-  
+<!--================== Solicite um proposta ==================-->
   <hr>
-
-  <section id="contato" class="contato">
+  <section id="proposta" class="proposta">
     <div class="container">
-      <h2>Entre em Contato</h2>
-      <form  class="container mb-4" id="form-contato">
+      <h2>Solicite uma Proposta</h2>
+      <form  class="container mb-4" id="form-proposta" action="enviar-emial.php" method="POST">
         <div class="alinha-direita">
           <a href="#home" class="botao-topo" class="alinha-direita">🔝 Inicio</a>
         </div>        
         <div class="row g-3">
           <div class="col-md-4">
             <label for="nome" class="form-label">Nome</label>
-            <input type="text" class="form-control" id="nome" placeholder="Seu nome" required />
+            <input type="text" class="form-control" id="nome" name="nome" placeholder="Seu nome" required />
             <small class="form-text text-muted"></small>
           </div>
           <div class="col-md-4">
             <label for="telefone" class="form-label">Telefone</label>
-            <input type="tel" class="form-control" id="telefone" placeholder="(99)99999-9999" required pattern="\(\d{2}\) \d{5}-\d{4}" />
+            <input type="tel" class="form-control" id="telefone" name="telefone" placeholder="(99)99999-9999" required pattern="\(\d{2}\) \d{5}-\d{4}" />
             <small class="form-text text-muted">Digite o DDD e o número, ex: (99)99999-9999</small>
           </div>
           <div class="col-md-4">
             <label for="email" class="form-label">Email</label>
-            <input type="email" class="form-control" id="email" placeholder="exemplo@dominio.com" required/>
+            <input type="email" class="form-control" id="email" name="email" placeholder="exemplo@dominio.com" required/>
             <small class="form-text text-muted">Digite um e-mail válido. Ex: nome@exemplo.com</small>
           </div>
           <div class="col-12">
             <label for="mensagem" class="form-label">Mensagem</label>
-            <textarea class="form-control" id="mensagem" placeholder="Sua mensagem" rows="4" required></textarea>
+            <textarea class="form-control" id="mensagem" name="mensagem" placeholder="Sua mensagem" rows="4" required></textarea>
           </div>
           <div class="col-12 text-end">
+            <div class="g-recaptcha" data-sitekey="6Ldy3BkrAAAAAG_vaKJ1BKhnwStukF8qWYOy6xVq"></div>
             <button type="submit">Enviar</button>
             <button type="button" class="botao" onclick="limparFormulario()">Cancelar</button>
           </div>
@@ -126,68 +131,137 @@
       </form>
     </div>
   </section>
-
-  
+  <!--================== Contato ==================-->
+  <section id="contato">
+    <div class="container">
+      <h2>Contato</h2>
+      <form  class="container mb-4">
+        <div class="row g-3">
+          <div class="col-md-12">
+            <div class="alinha-direita">
+              <a href="#home" class="botao-topo" class="alinha-direita">🔝 Inicio</a>
+            </div> 
+          </div>
+          <div class="col-md-4">
+            <p><b>Isis Seguros</b></p> 
+            <p>Rua Habib Sarkis, 74</p>
+            <p>São José dos Pinhais/PR</p>
+            <p><b>CEP:</b> 83.045-725</p>
+            <img src="imagens/telefone.png" alt="telefone"> (41) 3045-1700</P>
+            <img src="imagens/telefone.png" alt="telefone"> (41) 99195-1640</P>
+            <!-- <img src="imagens/whatsapp.png" alt="telefone"> (41) 3045-1700 -->
+            <a href="https://wa.me/554130451700" target="_blank" style="text-decoration: none; color: inherit;">
+              <img src="imagens/whatsapp.png" alt="whatsapp" style="width: 20px; vertical-align: middle;">
+              (41) 3045-1700
+            </a>  
+          </div> 
+          <!-- Google Maps -->
+          <div class="col-md-8">
+        
+            <div style="margin-top: 20px;">
+              <iframe 
+                src="https://www.google.com/maps?q=Rua+Habib+Sarkis,+74,+São+José+dos+Pinhais,+PR&output=embed"
+                width="100%" 
+                height="300" 
+                style="border:0;" 
+                allowfullscreen="" 
+                loading="lazy" 
+                referrerpolicy="no-referrer-when-downgrade">
+              </iframe>
+            </div>
+          </div>
+        </div>
+      </form>
+    </div>
+  </section>
+<!--================== INFORMAÇÃO DO REDAPÉ ==================-->
   <footer>
     <div class="container">
       <p style="text-align: center;">&copy; Isis Seguros. Todos os direitos reservados.</p>
     </div>
   </footer>
-
-
-  <!-- -------Modal para o botão Assistência 24hs---------- -->
+<!--================== MODAL DE ASSISTÊNCIA 24HS ==================-->
   <div id="modal-assistencia" class="modal">
     <div class="modal-content">
       <span class="close" id="fechar-assistencia">&times;</span>
       <h3>Assistência 24hs</h3>
       <p>Estamos sempre prontos para te ajudar, a qualquer hora do dia ou da noite.</p>
-  
-      <!-- Cards dentro do modal -->
+<!--================== CARDS ---- MODAL DE ASSISTÊNCIA 24HS ==================-->
       <div class="cards">
         <div class="card">
-          <img src="imagens/hdiSeguro.jpg" alt="">
+          <img src="imagens/logoSeguradoras/hdiSeguro.jpg" alt="HDI Seguros" >
           <h4>HDI SEGUROS</h4>
-          <p>Assistência 24hs, Vidros e Reparos, Sinistro.</p>
-          <p>Automóvel, Residencial, Empresarial e Condomínio.</p>
-          <p><b>Telefone:</b> 3003.5390 - 0800.434.4340</p>
+          <p>Assistência 24hs - Vidros, reparos, sinistro, automóvel, residencial, empresarial e condomínio.</p>
+          <p><b>Capitais</b></p>
+          <p><img src="imagens/telefone.png" alt="Telefone" class="telWhats"> 3003.5390</p>
+          <p><b>Demais Localidades</b></p>
+          <p><img src="imagens/telefone.png" alt="Telefone" class="telWhats"> 0800.434.4340</p>
+          <!-- <p><b>WhatsApp</b></p> -->
+          <!-- <p><a href="https://wa.me/552139062985" target="_blank" style="text-decoration: none; color: inherit;">
+            <img src="imagens/whatsapp.png" alt="Whatsapp" class="telWhats"> (21) 3906-2985</a></p> -->
         </div>  
         <div class="card">
-          <img src="imagens/portoSeguro.jpg" alt="">
+          <img src="imagens/logoSeguradoras/portoSeguro.jpg" alt="">
           <h4>Porto Seguro</h4>
-          <p>Assistência 24hs, Vidros e Reparos, Sinistro.</p>
-          <p>Automóvel, Residencial, e Empresarial.</p>
-          <p><b>Telefone:</b> 4004.76.786 - 0300.337.6786</p>
+          <p>Assistência 24hs - Vidros, reparos, sinistro, automóvel, eesidencial, e empresarial.</p>
+          <p><b>Capitais</b></p>
+          <p><img src="imagens/telefone.png" alt="Telefone" class="telWhats"> 4004.76.786</p>
+          <p><b>Demais Localidades</b></p>
+          <p><img src="imagens/telefone.png" alt="Telefone" class="telWhats"> 0300.337.6786</p>
+          <!-- <p><b>WhatsApp</b></p>
+          <p><a href="https://wa.me/552139062985" target="_blank" style="text-decoration: none; color: inherit;">
+            <img src="imagens/whatsapp.png" alt="Whatsapp" class="telWhats"> (21) 3906-2985</a></p> -->
         </div>  
         <div class="card">
-          <img src="imagens/asulSeguro.png" alt="">
+          <img src="imagens/logoSeguradoras/azulSeguros.jpg" alt="">
           <h4>Azul</h4>
-          <p>Assistência 24hs.</p>
-          <p>Automóvel.</p>
-          <p><b>Telefone:</b> 4004.3700 - 0800.703.0203</p>
+          <p>Assistência 24hs - Automóvel.</p>
+          <p><b>Capitais</b></p>
+          <p><img src="imagens/telefone.png" alt="Telefone" class="telWhats"> 4004.3700</p>
+          <p><b>Demais Localidades</b></p>
+          <p><img src="imagens/telefone.png" alt="Telefone" class="telWhats"> 0800.703.0203</p>
+          <p><b>WhatsApp</b></p>
+          <p><a href="https://wa.me/552139062985" target="_blank" style="text-decoration: none; color: inherit;">
+            <img src="imagens/whatsapp.png" alt="Whatsapp" class="telWhats"> (21) 3906-2985</a></p>
         </div>
         <div class="card">
-          <img src="imagens/bateria.jpg" alt="">
+          <img src="imagens/logoSeguradoras/mitsui.jpg" alt="">
           <h4>Mitsui</h4>
-          <p>Assistência 24hs.</p>
-          <p>Automóvel, Residencial, e Empresarial.</p>
-          <p><b>Telefone:</b> 0300.772.6744</p>
+          <p>Assistência 24hs - Automóvel, residencial, e empresarial.</p>
+          <p><b>Telefone</b></p>
+          <p><img src="imagens/telefone.png" alt="Telefone" class="telWhats"> 0300.772.6744</p>
+          <!-- <p><b>Demais Localidades</b></p>
+          <p><img src="imagens/telefone.png" alt="Telefone" class="telWhats"> 0800.703.0203</p>
+          <p><b>WhatsApp</b></p>
+          <p><a href="https://wa.me/552139062985" target="_blank" style="text-decoration: none; color: inherit;">
+            <img src="imagens/whatsapp.png" alt="Whatsapp" class="telWhats"> (21) 3906-2985</a></p> -->
         </div>
         <div class="card">
-          <img src="imagens/chaveiro.jpg" alt="">
+          <img src="imagens/logoSeguradoras/tokio.jpg" alt="">
           <h4>Tókio</h4>
-          <p>Assistência 24hs e Sinistros.</p>
-          <p>Automóvel, Residencial, e Empresarial.</p>
-          <p><b>Telefone:</b> 0300.772.6744</p>
-          <p><b>Vidros.</b></p>
-          <p><b>Telefone:</b> 0800.707.8005</p>
-          <p><b>Carro Reserca.</b></p>
-          <p><b>Telefone:</b> 0800.208.6546 - (11) 2125.3212</p>
+          <p>Assistência 24hs - Sinistros, automóvel, residencial, e empresarial.</p>
+          <p><b>Telefone</b></p>
+          <p><img src="imagens/telefone.png" alt="Telefone" class="telWhats"> 0300.772.6744</p>
+          <p><b>Vidros</b></p>
+          <p><img src="imagens/telefone.png" alt="Telefone" class="telWhats"> 0800.707.8005</p>
+          <p><b>Carro Reserva</b></p>
+          <p><img src="imagens/telefone.png" alt="Telefone" class="telWhats"> 0800.208.6546</p>
+          <p><b>WhatsApp</b></p>
+          <p><a href="https://wa.me/5511212532125" target="_blank" style="text-decoration: none; color: inherit;">
+            <img src="imagens/whatsapp.png" alt="Whatsapp" class="telWhats"> (11) 2125.3212</a></p>
         </div> 
       </div>
     </div>
   </div>
-  
+<!--================== CHAMADA DO JAVA ==================-->
+<a href="https://wa.me/554130451700" target="_blank" class="whatsapp-popup">
+  <img src="imagens/whatsapp.png" alt="WhatsApp" />
+  <span>Precisa de ajuda? Fale conosco.</span>
+</a>
 
+<!--================== CHAMADA DO JAVA ==================-->
   <script src="script.js"></script>
+<!--================== CHAMADA CAPTACHA ==================--> 
+  <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 </body>
 </html>

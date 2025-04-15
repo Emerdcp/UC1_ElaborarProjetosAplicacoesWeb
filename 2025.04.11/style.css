@@ -4,7 +4,7 @@
     box-sizing: border-box; /*Faz com que o tamanho de um elemento (largura/altura) inclua bordas e preenchimentos. Isso facilita o controle do tamanho dos elementos*/
   }
   
-  /*Centralizaçaõ e Justificativa de texto*/
+  /*================== CENTRALIZAÇÃO E JUSTICATIVA DE TEXTO (P)ARAGRAFO ==================*/
   p {
     text-align: justify;  
   }
@@ -60,8 +60,7 @@
     padding: 60px 20px; /*Adiciona 60px de espaço superior e inferior e 20px nas laterais*/
   }
 
-/*Fundo Setion 2 Proteja o que mais importante*/
-
+/*================== FUNDO SETION ==================*/
   .hero {
     position: relative;
     background-image: url('imagens/familia.jpg');
@@ -78,8 +77,9 @@
     color: white;
   }
 
-/*-----------Fim----------------*/
+/*================== FIM ==================*/
 
+/*================== PARAMETRO PARA FONTE E TAMANHO ==================*/
   .hero h2 {
     font-size: 2.5em; /*Aumenta o tamanho da fonte para 2,5 vezes o tamanho padrão*/
     margin-bottom: 10px; /* Adiciona um espaço abaixo do título*/
@@ -109,7 +109,7 @@
     padding: 40px 20px;
   }
   
-  .sobre, .servicos, .contato {
+  .sobre, .servicos, .proposta {
     background: #fff;
     border-bottom: 1px solid #ddd;
   }
@@ -160,9 +160,7 @@
     padding: 15px;
   }
   
-
-  /* Cards lado a lado. */
-
+/*================== CARDS LADO A LADO ==================*/
   .cards {
     display: flex; /*Define que os cards sejam dispostos em linha*/
     flex-wrap: wrap; /*Faz com que os cards "quebrem" para a próxima linha quando não couberem*/
@@ -213,8 +211,7 @@
     color: #666;
   }
 
-
-    /* Colocando imagem no logo, tamanho do logo */
+/*================== COLOCANDO IMAGEM NO LOGO, TAMANHO DO LOGO ==================*/
   .logo-header {
     display: flex;
     align-items: center;
@@ -225,9 +222,7 @@
     height: 60px;
   }
 
-
-/* Colocado para padronizar o tamanho das imagens do Cards. */
-
+/*================== COLOCADO PARA PADRONIZAR O TAMANHO DAS IMAGENS DO CARDS ==================*/
   .cards {
     display: flex;
     flex-wrap: wrap;
@@ -268,8 +263,7 @@
     color: #666;
   }
   
- /* Alinhando o Rodape da Menu */
-
+/*================== ALINHAMENDO O RODAPE DO MENU ==================*/
 .navegacao-section {
     display: flex;
     flex-direction: column;
@@ -304,7 +298,7 @@
     color: #ffc107; /* Amarelo no hover */
   }
 
-/* imagem Família */
+  /*================== IMAGEM DA FAMÍLIA CENTRALIZADO ==================*/
 
   img {
     width: 100%;
@@ -312,8 +306,7 @@
     height: auto;
   }
 
-
-
+  /*================== RESPONSIVEL ==================*/
   @media (max-width: 768px) {
     header .container {
       flex-direction: column;
@@ -356,8 +349,8 @@
     }
   }
   
+/*================== USADO PARA MODELAR DO MODAL ==================*/
 
-  /*CSS para Modal*/
   .modal {
     display: none;
     position: fixed;
@@ -385,8 +378,7 @@
     cursor: pointer;
   }
   
-
-  /* ------ Modal para Assistência 24hs ------------ */
+/*================== MODAL PARA ASSISTÊNCIA 24HS ==================*/
 
   .modal {
     display: none; /* Escondido por padrão */
@@ -448,8 +440,7 @@
     font-size: 14px;
   }
   
-
-  /* Botão Voltar ao Topo home */
+/*================== BOTÃO VOLTAR AO TOPO HOME ==================*/
 
   .botao-topo {
     display: inline-block;
@@ -476,4 +467,52 @@
   .alinha-direita {
     text-align: right;
     margin-bottom: 10px; /* opcional: dá um espacinho */
+  }
+
+  /*================== TAMANHO DAS IMAGENS TELEFOEN E WHATS==================*/
+  #contato img {
+    width: 20px; /* ou qualquer tamanho que desejar */
+    height: auto; /* mantém a proporção */
+    margin: 5px 0;
+  }
+
+  /*================== MODAL TAMANHO DAS IMAGENS TELEFOEN E WHATS==================*/
+  .telWhats {
+    width: 20px !important;
+    height: auto !important;
+    margin: 5px 0;
+    vertical-align: middle !important;
+  }
+
+  /*================== ATENDIMENTO POR WHATSAPP - PRECISANDO DE AJUDA ==================*/
+  .whatsapp-popup {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #25d366;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    text-decoration: none;
+    font-family: sans-serif;
+    z-index: 999;
+    transition: transform 0.3s ease;
+  }
+  
+  .whatsapp-popup:hover {
+    transform: scale(1.05);
+  }
+  
+  .whatsapp-popup img {
+    width: 24px;
+    height: 24px;
+    margin-right: 8px;
+  }
+  
+  /*================== FORMATEÇÃO DO CAPTCHA ==================*/
+  .g-recaptcha {
+    margin: 15px 0;
   }
