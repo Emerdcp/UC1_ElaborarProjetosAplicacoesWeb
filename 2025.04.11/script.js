@@ -7,18 +7,24 @@ document.getElementById('form-proposta').addEventListener('submit', function(e) 
       nome: document.getElementById("nome").value,
       telefone: document.getElementById("telefone").value,
       email: document.getElementById("email").value,
+      mensagem: document.getElementById("mensagem").value,
       enviar: true
     }
+
+    const form = document.getElementById('form-proposta');
+
 
     // Envia os dados para o arquivo PHP
     fetch('enviar-email.php', {
       method: 'POST',
-      body: data
-    })
-    .then(response => response.text())
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(data)
+    }).then(response => response.text())
     .then(data => {
-      console.log(data)
-      return
+      // console.log(data)
+      // return
       // Aqui você pode verificar a resposta do servidor
       alert('Mensagem enviada com sucesso! Em breve entraremos em contato.');
       form.reset();

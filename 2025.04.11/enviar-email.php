@@ -6,13 +6,16 @@
 use PHPMailer\PHPMailer\PHPMailer;
 require 'vendor/autoload.php';
 
-if (isset($_POST['enviar'])) {
-    // Cria uma nova instância do PHPMailer
+header("Content-type: Application/json");
+// if ($_SERVER["REQUEST_METHOD"] === "POST") {
+$dados = (count($_POST) == 0) ? json_decode(file_get_contents("php://input"),true) : ($_POST);
+if (isset($dados['enviar'])) {
     $mail = new PHPMailer();
-    $nome = $_POST['nome'];
-    $telefone = $_POST['telefone'];
-    $email = $_POST['email'];
-    $nome = $_POST['nome'];
+    // Cria uma nova instância do PHPMailer
+    $nome = $dados['nome'];
+    $telefone = $dados['telefone'];
+    $email = $dados['email'];
+    $mensagem = $dados['mensagem'];
 
     $email_from = getenv("CONTROL_PROJ_EMAIL_MAIL");
 
@@ -34,7 +37,7 @@ if (isset($_POST['enviar'])) {
     $mail->Password = getenv("CONTROL_PROJ_EMAIL_PWD"); // Insira aqui a senha do e-mail
     $mail->SMTPSecure = 'tls';
     $mail->Port = 587;
-    $destinatario_email = "emersoncarvalho@hotmail.com.br"; //$_POST['email_enviar']
+    $destinatario_email = "emersoncarvalho@hotmail.com.br"; //$dados['email_enviar']
     if (empty($destinatario_email)) {
         http_response_code(400);
         die(json_encode([
@@ -54,7 +57,7 @@ if (isset($_POST['enviar'])) {
     // Configura o assunto
     $mail->Subject = 'Proposta Site';
 
-    // Configura o corpo da mensagem
+    // Configura o corpo da mensagem Colocar a mesangem e colocar o campo para envio
     $mail->Body = "Solicitação de Proposta Via Site. <br>Nome: $nome. <br>Telefone: $telefone. <br>e-mail: $email.<br>Assunto: $mensagem";
 
     // Configura o corpo da mensagem em texto simples, caso o destinatário não aceite HTML
@@ -85,7 +88,7 @@ if (isset($_POST['enviar'])) {
 
 //   //================== VERIFICA CAPTCHA PRIMEIRO ==================//
 //   $secret = "6Ldy3BkrAAAAAEaMegBLeNK0B6Z0fsLr7IQUcL-U"; // sua chave secreta
-//   $response = $_POST['g-recaptcha-response'];
+//   $response = $dados['g-recaptcha-response'];
 //   $remoteip = $_SERVER['REMOTE_ADDR'];
 
 //   $url = "https://www.google.com/recaptcha/api/siteverify";
@@ -109,10 +112,10 @@ if (isset($_POST['enviar'])) {
 
 //   if ($captchaSuccess->success) {
 //     //================== CAPTCHA OK - PEGA OS DADOS DO FORMULÁRIO ==================//
-//     $nome     = $_POST['nome'];
-//     $email    = $_POST['email'];
-//     $telefone = $_POST['telefone'];
-//     $mensagem = $_POST['mensagem'];
+//     $nome     = $dados['nome'];
+//     $email    = $dados['email'];
+//     $telefone = $dados['telefone'];
+//     $mensagem = $dados['mensagem'];
 
 //     //================== DESTINATÁRIO ==================//
 //     $para = "emersoncarvalho@hotmail.com.br";
