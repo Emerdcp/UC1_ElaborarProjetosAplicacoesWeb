@@ -1,0 +1,23 @@
+Criação do briefing
+
+Para Analisar as informação da empreas para poder fazer o incial de criação de site.
+
+01.	Nome da Empresa
+
+02.	Tem logo
+
+03.	Tem rede Sociais
+
+04.	Qual o tipo de produto específico para site “Venda, Informativo, Viagens”
+
+05.	Público-alvo
+
+06.	Cores desejadas
+
+07.	Funções desejada no sistema
+
+08.	Qual o objetivo para o site
+
+09.	Conteúdo para apresentação
+
+10.	Tem algum outro site que gostaria de se espelhar

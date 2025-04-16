@@ -484,6 +484,16 @@
     vertical-align: middle !important;
   }
 
+  /*================== MODAL TAMANHO DAS IMAGENS REDES SOCIAIS==================*/
+  .redesSociais {
+    width: 40px !important;
+    height: auto !important;
+    margin: 5px 0;
+    vertical-align: middle !important;
+  }
+
+  
+
   /*================== ATENDIMENTO POR WHATSAPP - PRECISANDO DE AJUDA ==================*/
   .whatsapp-popup {
     position: fixed;
@@ -516,3 +526,5 @@
   .g-recaptcha {
     margin: 15px 0;
   }
+
+  /*================== Carrega Mais ==================*/

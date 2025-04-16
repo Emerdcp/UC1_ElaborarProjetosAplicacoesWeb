@@ -8,8 +8,8 @@
   <link rel="stylesheet" href="style.css" />
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
 </head>
-<!-- <body> -->
-<body style="background-image: url(imagens/logoIsisSeguroFundo.png); background-attachment: fixed; background-repeat: no-repeat; background-size: 100% 100%;">  
+<body>
+<!-- <body style="background-image: url(imagens/logoIsisSeguroFundo.png); background-attachment: fixed; background-repeat: no-repeat; background-size: 100% 100%;">   -->
   <!--================== LOGO E MENU ==================-->
   <header id="home">
     <div class="container">
@@ -50,7 +50,7 @@
   </section>
   <hr>
   <!--================== PRODUTOS - CARDS ==================-->
-  <section id="produtos" class="produtos">
+  <section id="produtos">
     <div class="container">
       <h2>Nossos Produtos</h2>
       <div class="alinha-direita">
@@ -58,33 +58,34 @@
       </div>  
         <div class="cards">
           <div class="card" data-produto="auto"> <!-- data-produto="auto" Para abrir o Modal.-->
-            <img src="imagens/seguroAuto.jpg" alt="Seguro Auto">
+            <img src="imagens/seguroAuto.jpg" alt="Seguro Auto" loading="lazy">
             <h3>Seguro Auto</h3>
             <p>Para proteger seu veículo, você também pode usufruir de uma série de vantagens.</p>
           </div>
           <div class="card" data-produto="previdencia"> <!-- data-produto="previdencia" Para abrir o Modal.-->
-            <img src="imagens/previdencia.jpg" alt="Previdência">
+            <img src="imagens/previdencia.jpg" alt="Previdência" loading="lazy">
             <h3>Previdência</h3>
             <p>Planeje seu futuro com um dos planos de Previdência para você.</p>
           </div>
           <div class="card" data-produto="residencial"> <!-- data-produto="residencial" Para abrir o Modal.-->
-            <img src="imagens/seguroResidencial.jpg" alt="Seguro Residencial">
+            <img src="imagens/seguroResidencial.jpg" alt="Seguro Residencial" loading="lazy">
             <h3>Seguro Residencial</h3>
             <p>O Seguro Residência foi feito para garantir o seu patrimônio e superar suas expectativas.</p>
           </div>
           <div class="card" data-produto="condominio"> <!-- data-produto="auto" Para abrir o Modal.-->
-            <img src="imagens/condominio.jpg" alt="condominio">
+            <img src="imagens/condominio.jpg" alt="condominio" loading="lazy">
             <h3>Seguro para Condomínio</h3>
             <p>Com Seguro Condomínio você deixa de se preocupar com eventuais problemas e ainda acumula vantagens.</p>
           </div>
           <div class="card" data-produto="empresariais"> <!-- data-produto="auto" Para abrir o Modal.-->
-            <img src="imagens/seguroEmpresariais.jpg" alt="empresariais">
+            <img src="imagens/seguroEmpresariais.jpg" alt="empresariais" loading="lazy">
             <h3>Seguro Empresariais</h3>
             <p>O Porto Seguro Empresa cuida do seu patrimônio com eficiência, segurança e economia.</p>
           </div>
         </div>
       </div>
   </section>
+
 <!--================== MODAL PARA ABRIR AS INFORMAÇÕES DOS CARDS ==================-->
   <div id="modal" class="modal">
     <div class="modal-content">
@@ -177,7 +178,11 @@
 <!--================== INFORMAÇÃO DO REDAPÉ ==================-->
   <footer>
     <div class="container">
-      <p style="text-align: center;">&copy; Isis Seguros. Todos os direitos reservados.</p>
+      <p style="text-align: center;">&copy; Isis Seguros. Todos os direitos reservados. Siga nossas redes Sociais
+      <a href="https://www.facebook.com/isis.seguros/" target="_blank" style="text-decoration: none; color: inherit;">
+      <img src="imagens/facebook.png" alt="facebook" class="redesSociais"> </a>
+      <a href="https://www.instagram.com/isis.seguros/"  target="_blank" style="text-decoration: none; color: inherit;">
+      <img src="imagens/instagram.png" alt="facebook" class="redesSociais"></a>
     </div>
   </footer>
 <!--================== MODAL DE ASSISTÊNCIA 24HS ==================-->
@@ -262,6 +267,7 @@
 <!--================== CHAMADA DO JAVA ==================-->
   <script src="script.js"></script>
 <!--================== CHAMADA CAPTACHA ==================--> 
-  <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+  <!-- <script src="https://www.google.com/recaptcha/api.js" async defer></script> -->
+
 </body>
 </html>

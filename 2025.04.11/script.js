@@ -251,3 +251,6 @@ const telefoneInput = document.getElementById("telefone");
     // Se estiver tudo certo
     return true;
   }
+
+//================== CARREGA MAIS ==================//
+
