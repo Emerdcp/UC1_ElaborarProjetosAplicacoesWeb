@@ -1,5 +1,17 @@
 //================== FORMULÁRIO DE CONTATO ==================//
 
+
+//--================== CHAVE CAPTCHA ==================
+// src="https://www.google.com/recaptcha/api.js"
+
+
+// function onSubmit(token) {
+//   document.getElementById("demo-form").submit();
+// }
+
+//--================== CHAVE CAPTCHA - FIM ==================
+
+
 document.getElementById('form-proposta').addEventListener('submit', function(e) {
     e.preventDefault();
 
