@@ -65,6 +65,16 @@ Claro! Abaixo está uma versão revisada e mais clara do seu briefing, mantendo 
 10. **Há mais alguma informação ou detalhe importante que deveríamos saber?**  
    (Diferenciais da empresa, datas importantes, restrições, preferências etc.)
 
+------ usado na aula de 17/04/2025
+
+11. 11.	Você deseja que o site tenha Suporte para atendimento?
+(Essa é boa pra entender se vai precisar de atendimento.)
+
+12. O site precisará de integração com alguma plataforma externa? (ex: WhatsApp, Instagram, sistema de pagamentos, CRM, etc.)
+(Ajuda a mapear integrações técnicas.)
+
+13. Como será feito o gerenciamento de conteúdo após a entrega? A equipe da empresa vai atualizar o site ou precisa de suporte contínuo?
+(Essa é útil pra entender se você precisa oferecer um painel administrativo ou manutenção.)
 ---
 
 ### 🧠 Sugestões e Explicações:
