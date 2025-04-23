@@ -1,43 +1,6 @@
 # Atividade
 
-1. **Qual o nome da empresa ou projeto?**  
-   (Se tiver um nome fantasia, coloque também.)
 
-2. **A empresa já tem uma identidade visual (logo, cores, fontes)?**  
-   (Se sim, pode enviar os arquivos ou links.)
-
-3. **A empresa já possui redes sociais ativas?**  
-   (Informe quais e os links, se possível.)
-
-4. **Qual o principal objetivo do site?**  
-   (Exemplo: Vender produtos, apresentar serviços, gerar contatos, divulgar viagens, portfólio etc.)
-
-5. **Quem é o público-alvo do site?**  
-   (Exemplo: Jovens, empresários, mães, pessoas interessadas em saúde, etc.)
-
-6. **Quais cores ou estilos visuais gostaria que o site seguisse?**  
-   (Pode mencionar cores específicas ou sentimentos/estilo que quer transmitir: moderno, rústico, elegante etc.)
-
-7. **Quais funcionalidades o site precisa ter?**  
-   (Exemplo: loja online, formulário de contato, área do cliente, blog, integração com WhatsApp etc.)
-
-8. **Quais conteúdos já estão prontos para o site?**  
-   (Exemplo: textos institucionais, imagens, vídeos, depoimentos, etc.)
-
-9. **Existe algum site que você gosta e gostaria de se inspirar?**  
-   (Pode enviar links e dizer o que você gosta nesses sites.)
-
-10. **Há mais alguma informação ou detalhe importante que deveríamos saber?**  
-   (Diferenciais da empresa, datas importantes, restrições, preferências etc.)
-
-11.	Você deseja que o site tenha Suporte para atendimento, ou integração com alguma plataforma externa? 
-(ex: WhatsApp, Instagram, sistema de pagamentos, CRM, etc.)
-
-12. Como será feito o gerenciamento de conteúdo após a entrega? A equipe da empresa vai atualizar o site ou precisa de suporte contínuo?
-(Essa é útil pra entender se você precisa oferecer um painel administrativo ou manutenção.)
-
-13. Qual seu nome completo e formas de contato?
-(Inclua e-mail, telefone e WhatsApp — usaremos para facilitar a comunicação durante o projeto.)
 
 -----------------------
 

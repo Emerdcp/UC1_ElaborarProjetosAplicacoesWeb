@@ -67,7 +67,7 @@ Claro! Abaixo está uma versão revisada e mais clara do seu briefing, mantendo 
 
 ------ usado na aula de 17/04/2025
 
-11. 11.	Você deseja que o site tenha Suporte para atendimento?
+11. Você deseja que o site tenha Suporte para atendimento?
 (Essa é boa pra entender se vai precisar de atendimento.)
 
 12. O site precisará de integração com alguma plataforma externa? (ex: WhatsApp, Instagram, sistema de pagamentos, CRM, etc.)
